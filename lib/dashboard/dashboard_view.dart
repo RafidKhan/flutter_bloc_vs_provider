@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_form_validation/login/views/login_screen.dart';
 import 'package:flutter_bloc_form_validation/user_info_form/provider_scope/provider_scope.dart';
+import 'package:flutter_bloc_form_validation/user_list/provider_scope/provider_scope.dart';
+import 'package:flutter_bloc_form_validation/user_list_from_api/provider_scope/provider_scope.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -34,7 +36,29 @@ class DashboardView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("User Data"),
+              child: const Text("User Add"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const UserListProviderScope(),
+                  ),
+                );
+              },
+              child: const Text("User List"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const UserListFromApiProviderScope(),
+                  ),
+                );
+              },
+              child: const Text("User List From Api"),
             ),
           ],
         ),

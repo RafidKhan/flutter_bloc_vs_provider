@@ -17,6 +17,7 @@ class UserForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final state = context.read(userFormProvider);
+
     return Scaffold(
         appBar: AppBar(),
         body: Padding(
@@ -34,10 +35,12 @@ class UserForm extends StatelessWidget {
                 ),
                 Consumer(builder: (context, ref, child) {
                   final state = ref.watch(userFormProvider);
+                  final controller = ref.read(userFormProvider.notifier);
                   return UserFormSubmitButton(
                     isEnabled: state.isValid,
                     onTap: () {
                       FocusScope.of(context).unfocus();
+                      controller.performSubmit(context);
                     },
                   );
                 }),
