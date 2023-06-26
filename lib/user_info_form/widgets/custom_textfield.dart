@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  final String hint;
+  final String label;
   final TextEditingController textEditingController;
   final FormFieldValidator<String>? validator;
 
   const CustomTextField({
     Key? key,
-    required this.hint,
+    required this.label,
     required this.textEditingController,
     this.validator,
   }) : super(key: key);
@@ -22,7 +22,7 @@ class CustomTextField extends StatelessWidget {
         child: TextFormField(
           controller: textEditingController,
           decoration: InputDecoration(
-            hintText: hint,
+            labelText: label,
           ),
           validator: validator,
           onChanged: (value) {

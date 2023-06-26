@@ -26,11 +26,11 @@ class UserForm extends StatelessWidget {
             child: Column(
               children: [
                 CustomTextField(
-                  hint: "Name",
+                  label: "Name",
                   textEditingController: state.name,
                 ),
                 CustomTextField(
-                  hint: "Email",
+                  label: "Email",
                   textEditingController: state.email,
                 ),
                 Consumer(builder: (context, ref, child) {

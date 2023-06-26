@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_form_validation/dashboard/dashboard_view.dart';
 
-
 void main() => runApp(const App());
 
 class App extends StatelessWidget {
