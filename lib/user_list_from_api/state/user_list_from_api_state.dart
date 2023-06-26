@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_form_validation/user_list/model/user_model.dart';
+import 'package:flutter_bloc_form_validation/models/user_model.dart';
 
 class UserListFromApiState {
   final bool isLoading;

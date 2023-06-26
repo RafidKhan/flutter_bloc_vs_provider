@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc_form_validation/database/database.dart';
-import 'package:flutter_bloc_form_validation/user_info_form/model/user_form_model.dart';
-import 'package:flutter_bloc_form_validation/user_list/model/user_model.dart';
+import 'package:flutter_bloc_form_validation/models/user_form_model.dart';
+import 'package:flutter_bloc_form_validation/models/user_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class UserFormProvider extends StateNotifier<UserFormModel> {

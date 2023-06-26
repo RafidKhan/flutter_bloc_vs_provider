@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_bloc_form_validation/login/models/email.dart';
-import 'package:flutter_bloc_form_validation/login/models/password.dart';
+import 'package:flutter_bloc_form_validation/models/email.dart';
+import 'package:flutter_bloc_form_validation/models/password.dart';
 import 'package:formz/formz.dart';
 
 part 'my_form_event.dart';
