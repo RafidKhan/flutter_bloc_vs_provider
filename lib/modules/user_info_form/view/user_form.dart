@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_form_validation/models/user_form_model.dart';
-import 'package:flutter_bloc_form_validation/user_info_form/provider/user_form_provider.dart';
-import 'package:flutter_bloc_form_validation/user_info_form/view/user_form_submit_button.dart';
-import 'package:flutter_bloc_form_validation/user_info_form/widgets/custom_textfield.dart';
+import 'package:flutter_bloc_form_validation/modules/user_info_form/provider/user_form_provider.dart';
+import 'package:flutter_bloc_form_validation/modules/user_info_form/widgets/custom_textfield.dart';
 import 'package:flutter_bloc_form_validation/utils/extensions.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'user_form_submit_button.dart';
 
 final userFormProvider =
     StateNotifierProvider.autoDispose<UserFormProvider, UserFormModel>((ref) {

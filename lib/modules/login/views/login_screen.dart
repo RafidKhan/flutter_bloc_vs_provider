@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_form_validation/login/bloc/my_form_bloc.dart';
-import 'package:flutter_bloc_form_validation/login/views/email_input.dart';
-import 'package:flutter_bloc_form_validation/login/views/password_input.dart';
-import 'package:flutter_bloc_form_validation/login/views/submit_button.dart';
-import 'package:flutter_bloc_form_validation/login/views/success_dialog.dart';
+import 'package:flutter_bloc_form_validation/modules/login/bloc/my_form_bloc.dart';
+import 'package:flutter_bloc_form_validation/modules/login/views/email_input.dart';
+import 'package:flutter_bloc_form_validation/modules/login/views/password_input.dart';
+import 'package:flutter_bloc_form_validation/modules/login/views/submit_button.dart';
+import 'package:flutter_bloc_form_validation/modules/login/views/success_dialog.dart';
 import 'package:formz/formz.dart';
 
 class LoginScreen extends StatelessWidget {

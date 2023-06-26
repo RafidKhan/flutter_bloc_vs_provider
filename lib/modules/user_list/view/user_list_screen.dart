@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_form_validation/user_list/provider/user_list_provider.dart';
-import 'package:flutter_bloc_form_validation/user_list/state/user_list_state.dart';
+import 'package:flutter_bloc_form_validation/modules/user_list/provider/user_list_provider.dart';
+import 'package:flutter_bloc_form_validation/modules/user_list/state/user_list_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final userListProvider =

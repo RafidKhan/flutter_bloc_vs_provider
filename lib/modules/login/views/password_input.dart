@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_form_validation/login/bloc/my_form_bloc.dart';
+import 'package:flutter_bloc_form_validation/modules/login/bloc/my_form_bloc.dart';
 
 class PasswordInput extends StatelessWidget {
   const PasswordInput({super.key});

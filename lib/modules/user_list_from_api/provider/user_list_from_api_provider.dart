@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc_form_validation/models/user_model.dart';
-import 'package:flutter_bloc_form_validation/user_list_from_api/state/user_list_from_api_state.dart';
+import 'package:flutter_bloc_form_validation/modules/user_list_from_api/state/user_list_from_api_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class UserListFromApiProvider extends StateNotifier<UserListFromApiState> {

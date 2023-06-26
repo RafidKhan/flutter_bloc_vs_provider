@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_form_validation/user_list_from_api/view/user_list_from_api_screen.dart';
+import 'package:flutter_bloc_form_validation/modules/user_list_from_api/view/user_list_from_api_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class UserListFromApiProviderScope extends StatelessWidget {

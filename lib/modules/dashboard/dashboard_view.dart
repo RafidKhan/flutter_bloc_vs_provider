@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_form_validation/login/views/login_screen.dart';
-import 'package:flutter_bloc_form_validation/user_info_form/provider_scope/provider_scope.dart';
-import 'package:flutter_bloc_form_validation/user_list/provider_scope/provider_scope.dart';
-import 'package:flutter_bloc_form_validation/user_list_from_api/provider_scope/provider_scope.dart';
+import 'package:flutter_bloc_form_validation/modules/login/views/login_screen.dart';
+import 'package:flutter_bloc_form_validation/modules/user_info_form/provider_scope/provider_scope.dart';
+import 'package:flutter_bloc_form_validation/modules/user_list/provider_scope/provider_scope.dart';
+import 'package:flutter_bloc_form_validation/modules/user_list_from_api/provider_scope/provider_scope.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({Key? key}) : super(key: key);
