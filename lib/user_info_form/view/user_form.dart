@@ -16,7 +16,7 @@ class UserForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = context.read(userFormProvider.notifier);
+    final state = context.read(userFormProvider);
     return Scaffold(
         appBar: AppBar(),
         body: Padding(
@@ -26,37 +26,24 @@ class UserForm extends StatelessWidget {
               children: [
                 CustomTextField(
                   hint: "Name",
-                  onChanged: (value) {
-                    controller.updateForm(name: value);
-                  },
+                  textEditingController: state.name,
                 ),
                 CustomTextField(
                   hint: "Email",
-                  onChanged: (value) {
-                    controller.updateForm(email: value);
-                  },
-                ),
-                CustomTextField(
-                  hint: "Phone",
-                  onChanged: (value) {
-                    controller.updateForm(phone: value);
-                  },
-                ),
-                CustomTextField(
-                  hint: "Address",
-                  onChanged: (value) {
-                    controller.updateForm(address: value);
-                  },
+                  textEditingController: state.email,
                 ),
                 Consumer(builder: (context, ref, child) {
                   final state = ref.watch(userFormProvider);
                   return UserFormSubmitButton(
                     isEnabled: state.isValid,
                     onTap: () {
-                      print("TAP");
+                      FocusScope.of(context).unfocus();
                     },
                   );
                 }),
+                const SizedBox(
+                  height: 30,
+                ),
               ],
             ),
           ),

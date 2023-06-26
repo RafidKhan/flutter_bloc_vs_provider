@@ -7,6 +7,8 @@ class UserFormProviderScope extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ProviderScope(child: UserForm());
+    return const ProviderScope(
+      child: UserForm(),
+    );
   }
 }
