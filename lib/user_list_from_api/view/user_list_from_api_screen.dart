@@ -15,22 +15,23 @@ class UserListFromApiScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Consumer(builder: (context, ref, child) {
-        final state = ref.watch(userListFromApiProvider);
-        final controller = ref.watch(userListFromApiProvider.notifier);
-        if (state.hasError) {
-          return const Center(
-            child: Text("Something went wrong"),
-          );
-        }
-        if (state.isLoading) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        }
+      body: Consumer(
+        builder: (context, ref, child) {
+          final state = ref.watch(userListFromApiProvider);
+          final controller = ref.watch(userListFromApiProvider.notifier);
+          if (state.hasError) {
+            return const Center(
+              child: Text("Something went wrong"),
+            );
+          }
+          if (state.isLoading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
 
-        if (state.users.isNotEmpty) {
-          return ListView.builder(
+          if (state.users.isNotEmpty) {
+            return ListView.builder(
               itemCount: state.users.length,
               itemBuilder: (context, index) {
                 final user = state.users[index];
@@ -44,17 +45,19 @@ class UserListFromApiScreen extends StatelessWidget {
                     icon: const Icon(Icons.delete),
                   ),
                 );
-              });
-        }
+              },
+            );
+          }
 
-        if (state.users.isEmpty) {
-          return const Center(
-            child: Text("No Data Found"),
-          );
-        }
+          if (state.users.isEmpty) {
+            return const Center(
+              child: Text("No Data Found"),
+            );
+          }
 
-        return const SizedBox();
-      }),
+          return const SizedBox();
+        },
+      ),
     );
   }
 }
