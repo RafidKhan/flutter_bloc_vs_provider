@@ -7,7 +7,7 @@ class UserListFromApiProvider extends StateNotifier<UserListFromApiState> {
   UserListFromApiProvider()
       : super(const UserListFromApiState(
           users: [],
-          isLoading: true,
+          isLoading: false,
           hasError: false,
         )) {
     fetchUsers();
@@ -15,6 +15,9 @@ class UserListFromApiProvider extends StateNotifier<UserListFromApiState> {
 
   Future<void> fetchUsers() async {
     try {
+      state = state.copyWith(
+        isLoading: true,
+      );
       final Dio dio = Dio();
 
       final response =
